@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Leitura do Tarot Cigano</title>
+    <style>
+        /* Estilos para o corpo da página */
+        body {
+            background-color: #F8EFEA;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Estilos para o cabeçalho da página */
+        header {
+            background-color: #B666D2;
+            color: #F8EFEA;
+            text-align: center;
+            padding: 10px;
+        }
+        
+        /* Estilos para a seção das cartas do tarot */
+        .tarot-section {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 100px;
+        }
+        
+        /* Estilos para cada carta do tarot */
+        .tarot-card {
+            background-color: #FFF;
+            border-radius: 10px;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+            width: 150px;
+            height: 250px;
+            text-align: center;
+            padding: 10px;
+            font-size: 16px;
+        }
+        
+        /* Estilos para a caixa de mensagem com o resultado da leitura */
+        .message-box {
+            background-color: #FFF;
+            border-radius: 10px;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+            width: 80%;
+            margin: 20px auto;
+            text-align: center;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Leitura do Tarot Cigano</h1>
+    </header>
+    
+    <div class="tarot-section">
+        <div class="tarot-card">
+            <h2>Carta 1</h2>
+            <img th:src="${imageUrl}" alt="Image">
+            <p th:text="${descricao}"></p>
+        </div>
+        <div class="tarot-card">
+            <h2>Carta 2</h2>
+            <p>Descrição da carta 2</p>
+        </div>
+        <div class="tarot-card">
+            <h2>Carta 3</h2>
+            <p>Descrição da carta 3</p>
+        </div>
+        <div class="tarot-card">
+            <h2>Carta 4</h2>
+            <p>Descrição da carta 4</p>
+        </div>
+        <div class="tarot-card">
+            <h2>Carta 5</h2>
+            <p>Descrição da carta 5</p>
+        </div>
+    </div>
+    
+    <div class="message-box">
+        <h2>Resultado da Leitura</h2>
+        <p>Descrição do resultado da leitura do tarot cigano.</p>
+    </div>
+</body>
+</html>
